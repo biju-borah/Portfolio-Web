@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eye</title>
+    <style>
+        body{
+            background-color: brown;
+            min-height: 100vh;
+        }
+        h1{
+            color: white;
+        }
+        .img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            background-color: brown;
+        }
+
+        .face {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: gold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .smile{
+            position: absolute;
+            width: 150px;
+            height: 70px;
+            background-color: darkgoldenrod;
+            top: 60%;
+            border-bottom-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+            transition: 0.2s;
+        }
+        .face:hover .smile{
+            width: 150px;
+            height: 40px;
+            background-color: darkgoldenrod;
+            top: 60%;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .eyes {
+            position: relative;
+            top: -40px;
+            display: flex;
+        }
+
+        .eye {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            display: block;
+            border-radius: 50px;
+            margin: 0px 15px;
+        }
+
+        .pupil1 {
+            position: absolute;
+            top: 25%;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: black;
+            transform: translate(20px, -25%);
+            transition: 0.1s;
+        }
+
+        .pupil2 {
+            position: absolute;
+            top: 25%;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: black;
+            transform: translate(20px, -25%);
+            transition: 0.1s;
+        }
+
+        /*.eye::before{
+            content: '';
+            position: absolute;
+            top: 25%;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: black;
+            transform: translate(20px,-25%);
+            transition: 0.1s;
+        }
+        .eye:hover::before{
+            
+            top: 25%;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: black;
+            transform: translate(-20px,25%);
+            
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <h1>404 not found<br>I will implement it in upcoming updates</h1>
+    <div class="img">
+        <div class="face">
+            <div class="eyes">
+                <div class="eye">
+                    <div class="pupil1"></div>
+                </div>
+                <div class="eye">
+                    <div class="pupil2"></div>
+                </div>
+            </div>
+            <div class="smile"></div>
+        </div>
+    </div>
+    <script>
+        /*var face = document.querySelector('.face')
+        face.onclick = function(){
+            var eyeball1 = document.querySelector('.pupil1')
+            eyeball1.style.transform = 'translate(-20px,25%)'
+            var eyeball2 = document.querySelector('.pupil2')
+            eyeball2.style.transform = 'translate(-20px,25%)'
+        }*/
+        setInterval(function(){
+            let i = (Math.random()- 0.5) * 25
+            console.log(i)
+            let j = (Math.random()- 0.5) * 50
+            console.log(j)
+            let k = (Math.random()- 0.5) * 25
+            console.log(k)
+            let l = (Math.random()- 0.5) * 50
+            console.log(l)
+
+            var eyeball1 = document.querySelector('.pupil1')
+            eyeball1.style.transform = 'translate(' + i + 'px,' + j + '%)'
+            var eyeball2 = document.querySelector('.pupil2')
+            eyeball2.style.transform = 'translate('+ k + 'px,' + l + '%)'
+        },100)
+    </script>
+
+</body>
+
+</html>

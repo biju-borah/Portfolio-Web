@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+            font-family: "Fredoka One", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+        }
+
+        .text-animation {
+            position: relative;
+            font-size: 50px;
+            font-weight: 600;
+            color: #eee;
+            width: 100vw;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            overflow: hidden;
+        }
+
+        .text-animation span {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-animation">
+        <span class="one">Game-Dev</span>
+        <span class="two">App-Dev</span>
+        <span class="three">Web-Dev</span>
+        <span class="four">Single</span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js" ></script>
+    <script>
+        var options = {
+            opacityIn: [0, 1],
+            scaleIn: [0.2, 1],
+            scaleOut: 3,
+            durationIn: 800,
+            durationOut: 600,
+            delay: 500,
+            easing: "easeInExpo"
+        };
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.text-animation .one',
+                opacity: options.opacityIn,
+                scale: options.scaleIn,
+                duration: options.durationIn
+            })
+            .add({
+                targets: '.text-animation .one',
+                opacity: 0,
+                scale: options.scaleOut,
+                easing: options.easing,
+                duration: options.durationOut,
+                delay: options.delay
+            })
+            .add({
+                targets: '.text-animation .two',
+                opacity: options.opacityIn,
+                scale: options.scaleIn,
+                duration: options.durationIn
+            })
+            .add({
+                targets: '.text-animation .two',
+                opacity: 0,
+                scale: options.scaleOut,
+                easing: options.easing,
+                duration: options.durationOut,
+                delay: options.delay
+            })
+            .add({
+                targets: '.text-animation .three',
+                opacity: options.opacityIn,
+                scale: options.scaleIn,
+                duration: options.durationIn
+            })
+            .add({
+                targets: '.text-animation .three',
+                opacity: 0,
+                scale: options.scaleOut,
+                easing: options.easing,
+                duration: options.durationOut,
+                delay: options.delay
+            })
+            .add({
+                targets: '.text-animation .four',
+                opacity: options.opacityIn,
+                scale: options.scaleIn,
+                duration: options.durationIn
+            })
+            .add({
+                targets: '.text-animation .four',
+                opacity: 0,
+                scale: options.scaleOut,
+                easing: options.easing,
+                duration: options.durationOut,
+                delay: options.delay
+            })
+            .add({
+                targets: '.text-animation',
+                opacity: 0,
+                duration: 500,
+                delay: 500
+            })
+    </script>
+</body>
+
+</html>
