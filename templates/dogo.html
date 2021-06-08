@@ -11,15 +11,17 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="icon" href="./static/logo.png" />
     <title>BijuB-Dev</title>
     <style>
         body {
+            background: linear-gradient(to bottom right,#33475b,#0033cc,#ff77cc,rgb(255,122,89));
             font-family: 'Courgette', cursive;
         }
 
         #banner {
-            /*background: linear-gradient(#add2eb,#e5eaf5,#dd8df4,#8458b3,#494d5f); */
-            background-color: #845bb3;
+            
+            /* background-color: #ff851b; */
             padding-top: 5%;
             min-height: 100vh;
         }
@@ -59,6 +61,12 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-light ">
+        <form class="container-fluid justify-content-start">
+          <a href="/contact" class="btn btn-outline-light me-2">Contact</a>
+          <a href="/about" class="btn btn-sm btn-outline-light">About</a>
+        </form>
+      </nav>
     <section id="banner">
         <div class="container d-flex">
             <div class="row">
@@ -104,7 +112,7 @@
                             </g>
                             </svg>
                         <p class="quote text-center">Hurray ! you have been visited by good luck programmer doggo!!. Say hail doggo to have error free code !</p>
-                        <a href="/" type="button" class="btn btn-outline-light">Hail doggo</a>
+                        <a href="/notfound" class="btn btn-outline-light">Hail doggo</a>
                     </div>
 
                 </div>
