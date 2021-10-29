@@ -16,6 +16,7 @@
     <title>BijuB-Dev</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
         body {
             font-family: 'Montserrat', sans-serif;
             overflow: hidden;
@@ -23,6 +24,10 @@
 
         .navbar-custom {
             background: linear-gradient(to left, #489DF0, #080079);
+            height: 10vh;
+            position: absolute;
+            width: 100%;
+            top: 0;
         }
 
         /* .navbar-brand{
@@ -35,13 +40,11 @@
         /* ----------------------------------------- */
         #banner {
             background: linear-gradient(to left, #489DF0, #080079);
-            padding-top: 5%;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-            min-height: 100vh;
-            padding-bottom: 8%;
+            min-height: 90vh;
+            margin-top: 10vh;
+            display: flex;
         }
+
         .promo-title {
             color: white;
             font-size: 40px;
@@ -99,7 +102,7 @@
 
         @media screen and (max-width: 800px) {
             body {
-               overflow: auto;
+                overflow: auto;
             }
         }
     </style>
@@ -153,20 +156,22 @@
     <section id="banner">
         <div class="container-fluid d-flex">
             <div class="row">
-                <div class="col-md-6 px-lg-5 px-1 order-2 align-self-center">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 px-1 order-2 align-self-center">
                     <p class="promo-title text-center">Hi there!</p>
-                    <p class="quote text-center px-1">Hi! I'm Biju Borah , a full-stack developer(noob) with focus mainly in
+                    <p class="quote text-center px-1">Hi! I'm Biju Borah , a full-stack developer(noob) with focus
+                        mainly in
                         backend. I am currently pursuing BTech in Electrical Engineering from National Institude of
                         Technology, Silchar. My hobbies includes breathing, blinking, more breathing. </p>
                     <div class="text-center">
-                        <a href="/cycle" class="btn btn-outline-info">Explore</a>
+                        <a href="/cycle" class="btn btn-outline-info mx-2">Explore</a>
                         <a href="/project" class="btn btn-outline-info">Projects</a>
                     </div>
                 </div>
-                <div class="col-md-6 order-1 d-flex justify-content-center align-items-center" >
+                <div class="col-md-5 order-1 d-flex justify-content-center align-items-center">
                     <!-- <img src="./static/icon.png" alt="" class="img-fluid vert-move"> -->
-                    <svg width="300px" class="img-fluid" height="300px" viewBox="0 0 300 300" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="img-fluid" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="circuit" class="path" stroke-width="1" fill-rule="evenodd" stroke-linecap="round"
                             stroke-linejoin="round" stroke-opacity="1" stroke-dasharray="45, 45" stroke-dashoffset="180"
                             fill="#fff" stroke="#02B3E4">
@@ -296,7 +301,6 @@
                         c0.781,0.114,1.569,0.284,2.362,0.51c0.794,0.227,1.519,0.527,2.177,0.901c0.656,0.374,1.189,0.941,1.598,1.7
                         c0.408,0.76,0.612,1.683,0.612,2.771v1.326c0,1.655-0.471,2.953-1.411,3.893c-0.941,0.941-2.239,1.411-3.894,1.411h-3.808
                         c-1.655,0-2.958-0.47-3.91-1.411C220.639,124.601,220.163,123.303,220.163,121.648z" />
-                        </g>
                         </g>
                     </svg>
                 </div>
